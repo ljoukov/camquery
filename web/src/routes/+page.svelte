@@ -329,31 +329,48 @@
 					<h3 class="mb-4 text-xl font-bold">CamQuery</h3>
 					<p class="text-gray-300">
 						Making Cambridge planning information accessible to all residents.
+						<br />
+						<strong>Disclaimer:</strong> CamQuery is an independent project and is not affiliated with
+						or endorsed by Cambridge City Council.
 					</p>
 				</div>
 
 				<div>
-					<h3 class="mb-4 text-lg font-semibold">Quick Links</h3>
-					<ul class="space-y-2 text-gray-300">
-						<li>
-							<a href="#" class="transition-colors hover:text-white">Planning Applications</a>
-						</li>
-						<li><a href="#" class="transition-colors hover:text-white">Council Meetings</a></li>
-						<li><a href="#" class="transition-colors hover:text-white">Development Plans</a></li>
-						<li><a href="#" class="transition-colors hover:text-white">Contact Council</a></li>
-					</ul>
+					<h3 class="mb-4 text-lg font-semibold">Source Code</h3>
+					<p class="text-gray-300">
+						<a href="https://github.com/ljoukov/camquery" class="hover:underline" target="_blank">
+							Open source on GitHub
+						</a>
+					</p>
 				</div>
 
 				<div>
-					<h3 class="mb-4 text-lg font-semibold">Contact</h3>
-					<p class="mb-2 text-gray-300">Cambridge City Council</p>
-					<p class="mb-2 text-gray-300">Planning Department</p>
-					<p class="text-gray-300">planning@cambridge.gov.uk</p>
+					<h3 class="mb-4 text-lg font-semibold">Offical References</h3>
+					<p class="mb-2 text-gray-300">
+						<a
+							href="https://www.cambridge.gov.uk/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="hover:underline"
+						>
+							Cambridge City Council
+						</a>
+					</p>
+					<p class="text-gray-300">
+						<a
+							href="https://www.cambridge.gov.uk/planning"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="hover:underline"
+						>
+							Planning Department
+						</a>
+					</p>
 				</div>
 			</div>
 
 			<div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
-				<p>&copy; 2025 CamQuery - Cambridge Planning Portal. All rights reserved.</p>
+				<p>&copy; 2025 CamQuery. Unofficial. All rights reserved.</p>
 			</div>
 		</div>
 	</footer>
