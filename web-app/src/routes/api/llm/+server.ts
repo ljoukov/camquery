@@ -1,6 +1,6 @@
 import type { RequestHandler } from './$types';
 import { llmRequestSchema, type LLMDelta } from '$lib/util/llmApi';
-import { llmStream } from '$lib/server/llm';
+import { llmStream } from '$lib/server/llmStream';
 import type { Content } from '@google/genai';
 import { errorAsString } from '$lib/util/error';
 
