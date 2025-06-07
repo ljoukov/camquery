@@ -18,8 +18,6 @@
 		"cf-typegen": "wrangler types ./src/worker-configuration.d.ts"
 	},
 	"devDependencies": {
-		"@ai-sdk/google": "^1.2.19",
-		"@ai-sdk/svelte": "^2.1.12",
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
 		"@google/genai": "^1.4.0",
