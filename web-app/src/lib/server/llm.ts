@@ -87,11 +87,6 @@ export type LLMPromptMessage = Omit<LLMMessage, 'role'> & {
 	role: Exclude<LLMMessage['role'], 'assistant'>;
 };
 
-export type LLMRequestId = {
-	requestId: string;
-	tag: string;
-};
-
 const llmLogRequestSchema = z.object({
 	messages: z.array(llmMessageSchema),
 	maxTokens: z.number(),
@@ -119,7 +114,6 @@ const responseModalitiesSchema = z.enum(['text', 'image']);
 type ResponseModalities = z.infer<typeof responseModalitiesSchema>;
 
 export type LLMCompletionRequest = {
-	llmRequestId: LLMRequestId;
 	model: LLMModel;
 	messages: LLMMessage[];
 	max_tokens: number;
@@ -287,6 +281,9 @@ async function getGoogleLlmRequestBody(
 			return { systemInstruction: undefined, contents: [] };
 		}
 	})();
+	// thinkingConfig: {
+	// 	includeThoughts: true;
+	// }
 	const requestBody: GoogleLlmRequest = {
 		contents,
 		generationConfig: {
@@ -448,9 +445,7 @@ export async function llmStreamCompletion(llmRequest: LLMCompletionRequest) {
 }
 
 export async function* llmStream(llmRequest: LLMCompletionRequest): AsyncGenerator<LLMDelta> {
-	const { provider, url, headers, requestBody, parseDelta } = await llmApiConfig(llmRequest);
-
-	const requestId = llmRequest.llmRequestId.requestId;
+	const { url, headers, requestBody, parseDelta } = await llmApiConfig(llmRequest);
 
 	let responseContent: LLMMessageContent | null = null;
 	const fetchResponse = await llmFetch({
